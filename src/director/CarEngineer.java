@@ -18,7 +18,6 @@ public class CarEngineer {
 		this.carBuilder.buildEngine();
 		if (carBuilder instanceof FerrariBuilder) {
 			((FerrariBuilder) this.carBuilder).buildSpoiler();
-			System.out.println("spoiler built");
 		}
 	}
 	

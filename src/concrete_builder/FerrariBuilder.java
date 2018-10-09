@@ -2,6 +2,11 @@ package concrete_builder;
 
 import builder.CarPlan;
 import builder.SportsCar;
+import parts.Color;
+import parts.FancySpoiler;
+import parts.RacingTires;
+import parts.SuperBody;
+import parts.V12Engine;
 
 public class FerrariBuilder implements CarBuilder{
 	
@@ -13,26 +18,26 @@ public class FerrariBuilder implements CarBuilder{
 
 	@Override
 	public void buildTires() {
-		this.sportsCar.setTires("race tires");
+		this.sportsCar.setTires(new RacingTires());
 	}
 
 	@Override
 	public void buildEngine() {
-		this.sportsCar.setEngine("V12 engine");
+		this.sportsCar.setEngine(new V12Engine());
 	}
 
 	@Override
 	public void buildBody() {
-		this.sportsCar.setBody("fancy body");
+		this.sportsCar.setBody(new SuperBody());
 	}
 
 	@Override
 	public void buildColor() {
-		this.sportsCar.setBody("red");
+		this.sportsCar.setColor(Color.RED);
 	}
 	
 	public void buildSpoiler() {
-		this.sportsCar.setSpoiler("fancy spoiler");
+		this.sportsCar.setSpoiler(new FancySpoiler());
 	}
 
 	@Override
